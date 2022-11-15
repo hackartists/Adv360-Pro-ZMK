@@ -2,25 +2,27 @@ macro_ctrl_space: macro_ctrl_space{
 compatible = "zmk,behavior-macro";
 label = "macro_ctrl_space";
 #binding-cells = <0>;
-bindings = <&kp LEFT_CONTROL>, <&kp SPACE>;
+bindings = <&macro_press &kp LEFT_CONTROL>
+          , <&macro_tap &kp SPACE>
+          , <&macro_release &kp LEFT_CONTROL>;
 };
 macro_alt_space: macro_alt_space{
 compatible = "zmk,behavior-macro";
 label = "macro_alt_space";
 #binding-cells = <0>;
-bindings = <&kp LEFT_ALT>, <&kp SPACE>;
+bindings = <&macro_press &kp LEFT_ALT>, <&macro_tap &kp SPACE>, <&macro_release &kp LEFT_ALT>;
 };
 macro_emacs_command: macro_emacs_command{
 compatible = "zmk,behavior-macro";
 label = "macro_emacs_command";
 #binding-cells = <0>;
-bindings = <&kp LEFT_ALT>, <&kp X>;
+bindings = <&macro_press &kp LEFT_ALT>, <&macro_tap &kp x>, <&macro_release &kp LEFT_ALT>;
 };
 macro_switch_input: macro_switch_input{
 compatible = "zmk,behavior-macro";
 label = "macro_switch_input";
 #binding-cells = <0>;
-bindings = <&kp LEFT_SHIFT>, <&kp SPACE>;
+bindings = <&macro_press &kp LEFT_SHIFT>, <&kp SPACE>, <&macro_release &kp LEFT_SHIFT>;
 };
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
