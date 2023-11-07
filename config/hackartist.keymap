@@ -25,6 +25,17 @@
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       };
+
+      hwp_caption: macro_hwp_caption {
+        compatible = "zmk,behavior-macro";
+        label = "hwp_caption";
+        #binding-cells = <0>;
+        bindings
+          = <&macro_press &kp LCTRL>
+          , <&macro_tap &kp N>
+          , <&macro_tap &kp C>
+          , <&macro_release &kp LCTRL>;
+      };
     };
 
   keymap {
@@ -83,7 +94,7 @@
     hwp_layer {
         bindings = <
         &kp EQUAL     &mt LC(N6) LC(N1)  &mt LC(N7) LC(N2) &mt LC(N8) LC(N3) &mt LC(N9) LC(N4)  &mt LC(N0) LC(N5) &to DEFAULT                                                            &to DEFAULT      &kp N6 &kp N7   &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp ENTER     &kp Q              &kp LA(LS(N))     &kp LA(LS(W))     &kp LC(F2)         &kp LA(T)         &kp DEL                                                                &none         &kp Y  &kp U    &kp I     &kp O    &kp P    &kp BSLH
+        &kp ENTER     &hwp_caption       &kp LA(LS(N))     &kp LA(LS(W))     &kp LC(F2)         &kp LA(T)         &kp DEL                                                                &none         &kp Y  &kp U    &kp I     &kp O    &kp P    &kp BSLH
         &kp ESC       &kp LC(A)          &kp LC(LS(L))     &kp LC(LS(C))     &kp LC(LS(R))      &kp LC(UP)        &kp LA(SPACE)          &kp LCMD &kp LCTRL &kp LCTRL &kp LCMD       &kp LC(SPACE) &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
         &kp LSHFT     &kp LA(C)          &kp LC(X)         &mt LA(C) LC(C)   &kp LC(V)          &kp LC(DOWN)                             &kp HOME  &kp END                                &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
         &kp LA(LSHFT) &kp GRAVE          &kp LA(X)         &kp LEFT          &kp RIGHT                            &kp F5 &kp LS(SPACE)   &kp LALT  &kp LALT  &kp BSPC  &kp ENTER                 &kp DOWN &kp UP    &kp LBKT &kp RBKT &kp LC(LSHFT)
