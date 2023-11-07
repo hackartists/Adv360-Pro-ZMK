@@ -10,6 +10,7 @@
 #define MAC 2
 #define DVORAK 3
 #define NUM 4
+#define HWP 5
 
 / {
     behaviors {
@@ -44,7 +45,7 @@
         &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans                                                                                                 &trans      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans
         &trans &kp F1       &kp F2       &kp F3       &kp F4       &to DEFAULT  &bootloader                                                                                            &bootloader &to DEFAULT  &kp F1       &kp F2       &kp F3       &kp F4       &trans
         &trans &kp F5       &kp F6       &kp F7       &kp F8       &to MAC      &bt BT_CLR        &rgb_ug RGB_MEFS_CMD 5  &rgb_ug RGB_TOG   &rgb_ug RGB_TOG  &rgb_ug RGB_MEFS_CMD 5    &bt BT_CLR  &to MAC      &kp F5       &kp F6       &kp F7       &kp F8       &trans
-        &trans &kp F9       &kp F10      &kp F11      &kp F12      &trans                                                 &trans            &trans                                                 &trans       &kp F9       &kp F10      &kp F11      &kp F12      &trans
+        &trans &kp F9       &kp F10      &kp F11      &kp F12      &to HWP                                                &trans            &trans                                                 &trans       &kp F9       &kp F10      &kp F11      &kp F12      &trans
         &trans &trans       &trans       &bl BL_INC   &bl BL_DEC                     &out OUT_TOG &bl BL_TOG              &trans            &trans           &bl BL_TOG &out OUT_TOG                            &bl BL_INC   &bl BL_DEC   &trans       &trans       &trans
       >;
     };
@@ -78,5 +79,16 @@
         &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT         &kp BSPC &kp DEL   &kp END   &kp PG_DN &kp ENTER &kp KP_N0        &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
       >;
     };
+
+    hwp_layer {
+        bindings = <
+        &kp EQUAL     &mt LC(N6) LC(N1)  &mt LC(N7) LC(N2) &mt LC(N8) LC(N3) &mt LC(N9) LC(N4)  &mt LC(N0) LC(N5) &to DEFAULT                                                            &to DEFAULT      &kp N6 &kp N7   &kp N8    &kp N9   &kp N0   &kp MINUS
+        &kp ENTER     &kp Q              &kp LA(LS(N))     &kp LA(LS(W))     &kp LC(F2)         &kp LA(T)         &kp DEL                                                                &none         &kp Y  &kp U    &kp I     &kp O    &kp P    &kp BSLH
+        &kp ESC       &kp LC(A)          &kp LC(LS(L))     &kp LC(LS(C))     &kp LC(LS(R))      &kp LC(UP)        &kp LA(SPACE)          &kp LCMD &kp LCTRL &kp LCTRL &kp LCMD       &kp LC(SPACE) &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
+        &kp LSHFT     &kp LA(C)          &kp LC(X)         &mt LA(C) LC(C)   &kp LC(V)          &kp LC(DOWN)                             &kp HOME  &kp END                                &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+        &kp LA(LSHFT) &kp GRAVE          &kp LA(X)         &kp LEFT          &kp RIGHT                            &kp F5 &kp LS(SPACE)   &kp LALT  &kp LALT  &kp BSPC  &kp ENTER                 &kp DOWN &kp UP    &kp LBKT &kp RBKT &kp LC(LSHFT)
+        >;
+    };
+
   };
 };
