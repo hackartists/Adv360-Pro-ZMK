@@ -4,13 +4,7 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: refil
       url-base: https://github.com/refil
-    - name: hackartists
-      url-base: https://github.com/hackartists
   projects:
-    # - name: zmk
-    #   remote: hackartists
-    #   revision: adv360-z3.2
-    #   import: app/west.yml
     - name: zmk
       remote: refil
       revision: adv360-z3.2-2
