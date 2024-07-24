@@ -117,11 +117,11 @@
 
     default_layer {
       bindings = <
-        &kp EQUAL     &mt LC(LA(F1)) N1    &mt LC(LA(F2) N2    &mt LC(LA(F3) N3   &kp N4     &mt LC(LA(F5) N5 &mo MISC                                                         &mo MISC      &mt LC(LA(F6) N6   &mt LC(LA(F7) N7   &mt LC(LA(F8) N8    &mt LC(LA(F9) N9   &mt LC(LA(F10) N0   &kp MINUS
-        &kp TAB       &kp Q     &kp W     &kp E    &kp R      &kp T  &kp DEL                                                          &td_mod       &kp Y    &kp U    &kp I     &kp O    &kp P    &kp BSLH
-        &kp ESC       &kp A     &kp S     &kp D    &kp F      &kp G  &td_ws            &kp LCTRL     &kp LCMD  &kp LCMD  &kp RCTRL    &vm_esc_act   &kp H    &kp J    &kp K     &kp L    &kp SEMI &kp SQT
+        &kp EQUAL     &kp N1    &kp N2    &kp N3   &kp N4     &kp N5 &mo MISC                                                         &mo MISC      &kp N6   &kp N7   &kp N8    &kp N9   &kp N0   &kp MINUS
+        &kp TAB       &kp Q     &kp W     &kp E    &kp R      &kp T  &kp DEL                                                          &kp LA(SPACE)    &kp Y    &kp U    &kp I     &kp O    &kp P    &kp BSLH
+        &kp ESC       &kp A     &kp S     &kp D    &kp F      &kp G  &vm_esc_act       &kp LCTRL     &kp LCMD  &kp LCMD  &kp LCTRL    &vm_esc_act   &kp H    &kp J    &kp K     &kp L    &kp SEMI &kp SQT
         &kp LSHFT     &kp Z     &kp X     &kp C    &kp V      &kp B                                  &kp HOME  &kp END                              &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH &kp LSHFT
-        &kp LA(LSHFT) &kp GRAVE &kp LA(X) &kp LEFT &kp RIGHT                 &kp SPACE &kp LS(SPACE) &kp LALT  &kp LALT  &kp BSPC  &kp ENTER                 &kp DOWN &kp UP    &kp LBKT &kp RBKT &kp LC(LSHFT)
+        &sw_to_dev    &kp GRAVE &kp LA(X) &kp LEFT &kp RIGHT                 &kp SPACE &kp LS(SPACE) &kp LALT  &kp LALT  &kp BSPC  &kp ENTER                 &kp DOWN &kp UP    &kp LBKT &kp RBKT &sw_to_vm
       >;
     };
 
